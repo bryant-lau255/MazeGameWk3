@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-    public class WinCondition : MonoBehaviour
+    public class winCondition : MonoBehaviour
     {
         public Transform player;
         public Transform goal;
