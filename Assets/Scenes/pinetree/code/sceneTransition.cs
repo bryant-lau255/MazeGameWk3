@@ -4,7 +4,7 @@ public class SceneTransition : MonoBehaviour
 {
     public void LoadGame()
     {
-        SceneManager.LoadGame("Game");
+        SceneManager.LoadScene("Game");
     }
 
     public void LoadMenu()
