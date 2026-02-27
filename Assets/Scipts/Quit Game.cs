@@ -7,4 +7,5 @@ public class Quit : MonoBehaviour
         Application.Quit();
         Debug.Log("QuitGame");
     }
+
 }

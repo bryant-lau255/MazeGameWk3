@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 679b14c2dd6a0da4badf466c7de5c00e
+  - enabled: 1
+    path: Assets/Scenes/pinetree/Pinetree's Maze.unity
+    guid: 6ba653c10789afe4d8db472e0d4598bb
+  - enabled: 1
+    path: Assets/Scenes/pinetree/Starting Screen.unity
+    guid: d3eae8fc9f1feb7478087c2ad2e82a17
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
