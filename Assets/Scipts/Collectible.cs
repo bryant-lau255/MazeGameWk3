@@ -15,17 +15,13 @@ public class Collectible : MonoBehaviour
         {
 
             Collect(other.gameObject);
-
+            Destroy(gameObject);
         }
     }
 
     void Collect(GameObject player)
     {
-
         Debug.Log("Item Collected!");
-
-        Destroy(gameObject);
-
     }
     
 }

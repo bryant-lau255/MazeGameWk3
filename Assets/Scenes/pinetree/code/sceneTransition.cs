@@ -2,9 +2,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
+    public string gameSceneName;
     public void LoadGame()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(gameSceneName);
     }
 
     public void LoadMenu()

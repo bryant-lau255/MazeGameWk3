@@ -20,21 +20,22 @@ public class NewMonoBehaviourScript : MonoBehaviour
         Vector3 movement = new Vector3(x, 0f, z);
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.Self);
 
-        bool grounded = Physics.Raycast(transform.position, -transform.up, transform.localScale.y / 2 + .2f);
+       
 
-        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up*JumpHeight);
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            moveSpeed = moveSpeed * 1.5f;
+        }
 
-        
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            moveSpeed = moveSpeed / 1.5f;
+        }
     }
 
-    void TestFunc()
-    {
-
-
-
-    }
 }

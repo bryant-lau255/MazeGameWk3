@@ -14,7 +14,7 @@ using UnityEngine;
                 
                     float distance = Vector3.Distance(player.position, goal.position);
                 
-                if (distance <= winDistance);
+                if (distance <= winDistance)
                 {
                     hasWon = true;
                     WinGame();
