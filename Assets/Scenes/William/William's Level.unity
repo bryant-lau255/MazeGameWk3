@@ -1304,8 +1304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067155406e5e1df46992849c210769d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbCollectible
-  targetScore: 3
-  door: {fileID: 0}
+  scoreManager: {fileID: 1371130074}
 --- !u!135 &262498439
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2154,8 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067155406e5e1df46992849c210769d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbCollectible
-  targetScore: 3
-  door: {fileID: 0}
+  scoreManager: {fileID: 1371130074}
 --- !u!135 &351215917
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4312,8 +4310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067155406e5e1df46992849c210769d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrbCollectible
-  targetScore: 3
-  door: {fileID: 0}
+  scoreManager: {fileID: 1371130074}
 --- !u!135 &771038294
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16587,6 +16584,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8783306491909106419, guid: f02116c209ecd9e488fc4d2cd8996133, type: 3}
   m_PrefabInstance: {fileID: 1364709700}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1371130071
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371130073}
+  - component: {fileID: 1371130074}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371130073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371130071}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.60252, y: 0.64971, z: 0.26024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1371130074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371130071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a8e644adf911f4e8e7c8ec66450aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrbScoreManager
+  targetScore: 3
+  currentScore: 0
+  door: {fileID: 1869786114}
 --- !u!1001 &1372342286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17028,6 +17072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5707bf55c564e1546b6bc5a3ca222b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinBoxCondition
+  nextSceneName: Bryant's Office Level
 --- !u!1001 &1419316181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23830,3 +23875,4 @@ SceneRoots:
   - {fileID: 262498442}
   - {fileID: 771038297}
   - {fileID: 351215920}
+  - {fileID: 1371130073}

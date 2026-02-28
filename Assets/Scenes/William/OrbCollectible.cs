@@ -2,27 +2,44 @@ using UnityEngine;
 
 public class OrbCollectible : MonoBehaviour
 {
-    public int targetScore = 3;
-    int currentScore = 0;
+    public OrbScoreManager scoreManager;
 
-    public GameObject door;
+    //public int targetScore = 3;
+    //public int currentScore;
 
-    private void Start()
-    {
-        currentScore = 0;
-    }
+    //public GameObject door;
+
+    //private void Awake()
+    //{
+    //    currentScore = 0;
+    //}
+    //private void Update()
+    //{
+    //    Debug.Log("Current score: " + currentScore);
+    //}
+
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        currentScore++;
+    //        Debug.Log("Current score: " +currentScore);
+    //        if (currentScore == targetScore)
+    //        {
+    //            door.SetActive(false);
+    //            Debug.Log("Door open");
+    //        }
+    //        gameObject.SetActive(false);
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            currentScore++;
-            if (currentScore == targetScore)
-            {
-                door.SetActive(false);
-                Debug.Log("Door open");
-            }
+            scoreManager.AddScore();
             gameObject.SetActive(false);
         }
+            
     }
 }
