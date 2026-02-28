@@ -3,7 +3,9 @@ using UnityEngine;
 public class OrbCollectible : MonoBehaviour
 {
     public int targetScore = 3;
-    public int currentScore = 0;
+    int currentScore = 0;
+
+    public GameObject door;
 
     private void Start()
     {
@@ -15,6 +17,11 @@ public class OrbCollectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             currentScore++;
+            if (currentScore == targetScore)
+            {
+                door.SetActive(false);
+                Debug.Log("Door open");
+            }
             gameObject.SetActive(false);
         }
     }
